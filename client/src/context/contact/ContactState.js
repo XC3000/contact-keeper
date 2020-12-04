@@ -26,13 +26,14 @@ const ContactState = (props) => {
       },
       {
         id: 2,
-        name: "Jill Johnson",
-        email: "jill@email.com",
-        phone: "111111",
+        name: "Jill John",
+        email: "jilljohn@email.com",
+        phone: "8017348894",
         type: "professional",
       },
     ],
     current: null,
+    filtered: null,
   };
   const [state, dispatch] = useReducer(contactReducer, initalState);
 

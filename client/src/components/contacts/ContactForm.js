@@ -25,8 +25,6 @@ const ContactForm = () => {
     }
   }, [contactContext, current]);
 
-  console.log(contact);
-
   const { name, email, phone, type } = contact;
 
   const onChange = (e) => {
@@ -44,10 +42,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (current === null) {
-      addContact(contact);
+      if (name && email && phone && type) addContact(contact);
     } else {
       updateContact(contact);
     }
+    clearAll();
   };
 
   return (
