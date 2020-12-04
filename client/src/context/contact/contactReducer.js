@@ -33,6 +33,12 @@ export default (state, action) => {
         current: null,
       };
 
+    case FILTER_CONTACTS:
+      return {
+        ...state,
+        filtered: state.contacts.filter(),
+      };
+
     case UPDATE_CONTACT:
       return {
         ...state,

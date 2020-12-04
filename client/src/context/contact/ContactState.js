@@ -46,7 +46,6 @@ const ContactState = (props) => {
   };
 
   // DELETE CONTACT
-
   const deleteContact = (id) => {
     dispatch({
       type: DELETE_CONTACT,
@@ -55,7 +54,6 @@ const ContactState = (props) => {
   };
 
   // SET CURRENT CONTACT
-
   const setCurrent = (contact) => {
     dispatch({
       type: SET_CURRENT,
@@ -64,7 +62,6 @@ const ContactState = (props) => {
   };
 
   // CLEAR CURRENT CONTACT
-
   const clearCurrent = (contact) => {
     dispatch({
       type: CLEAR_CURRENT,
@@ -72,7 +69,6 @@ const ContactState = (props) => {
   };
 
   // UPDATE CONTACT
-
   const updateContact = (contact) => {
     dispatch({
       type: UPDATE_CONTACT,
@@ -81,8 +77,19 @@ const ContactState = (props) => {
   };
 
   // FILTER CONTACTS
+  const filterContacts = (text) => {
+    dispatch({
+      type: FILTER_CONTACTS,
+      payload: text,
+    });
+  };
 
   // CLEAR FILTER
+  const clearFilter = () => {
+    dispatch({
+      type: CLEAR_FILTER,
+    });
+  };
 
   return (
     <ContactContext.Provider
